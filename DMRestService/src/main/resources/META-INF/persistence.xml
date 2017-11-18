@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+        version="2.0">
+        
+        <persistence-unit name="DMS-JPA">
+        	<provider>org.hibernate.ejb.HibernatePersistence</provider>
+        	<class>com.hl.is.dms.rest.model.DocumentEntity</class>
+        	<class>com.hl.is.dms.rest.model.DocumentEntity</class>
+        	<properties>
+			<property name="hibernate.dialect" value="org.hibernate.dialect.Oracle10gDialect" />
+			<property name="hibernate.hbm2ddl.auto" value="create" />
+			<property name="hibernate.show_sql" value="true" />
+			<property name="hibernate.format_sql" value="true" />
+			<property name="hibernate.connection.driver_class" value="oracle.jdbc.OracleDriver" />
+			<property name="hibernate.connection.username" value="DMS" />
+			<property name="hibernate.connection.password" value="Welcome1" />
+			<!-- <property name="hibernate.connection.url" value="jdbc:oracle:thin:@usws1devdb01:1527/DMDEV" /> -->
+			<property name="hibernate.connection.url" value="jdbc:oracle:thin:@4uswindt00353:1521/orcl.hrbl.net" />
+			<property name="hibernate.id.new_generator_mappings" value="true"/>
+			<!-- <property name="show_sql" value="true" />
+			<property name="format_sql" value="true" />
+			<property name="hbm2ddl.auto" value="create" /> -->
+		</properties>
+        </persistence-unit>
+</persistence>
